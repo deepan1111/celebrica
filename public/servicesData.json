@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "image": "https://media.istockphoto.com/id/1011750836/photo/smiling-pregnant-woman-feeling-surprised-seeing-so-many-presents.jpg?s=612x612&w=0&k=20&c=aHYl2oSbRvX7f5Nr2KeXBJL4bnTW0bJTXRjH1QAIf4Y=",
+    "title": "House party",
+    "description": "Celebrate your engagement with unparalleled style and sophistication. Our engagement planning includes curated themes, elegant décor, and entertainment tailored to your story.",
+    "cost": "Rs 200,000 onwards",
+    "location": "Delhi NCR",
+    "duration": "4-6 hours"
+  },
+  {
+    "id": 2,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cuS-3gLzasQ76vu6kC9iq37-M-G-S4yt9Q&s",
+    "title": "Elegant Wedding Ceremony",
+    "description": "Make your special day unforgettable with our bespoke wedding event planning and decoration services. From venue selection to Varmala themes, we handle every detail with love.",
+    "cost": "Rs 1,00,000 onwards",
+    "location": "Jaipur, Rajasthan",
+    "duration": "Full Day"
+  },
+  {
+    "id": 3,
+    "image": "https://cheetah.cherishx.com/uploads/1615802726_small.jpg",
+    "title": "Birthday Bash",
+    "description": "From themed parties to surprise celebrations, we craft joyful birthday experiences for all ages. Choose cartoon, royal, or glow-in-the-dark themes and make memories.",
+    "cost": "Rs 15,000 onwards",
+    "location": "Mumbai, Maharashtra",
+    "duration": "3-5 hours"
+  },
+  {
+    "id": 4,
+    "image": "https://www.shutterstock.com/image-photo/johannesburg-gauteng-south-africa-06092010-600nw-1375254728.jpg",
+    "title": "Corporate Gala Night",
+    "description": "Host a professional yet elegant event for your team and clients with our end-to-end corporate event solutions including stage, lighting, awards, and team-building games.",
+    "cost": "Rs 75,000 onwards",
+    "location": "Bangalore, Karnataka",
+    "duration": "Evening to Night"
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1625990462521-a09e6b880d50?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Baby Shower Celebration",
+    "description": "Welcome the new member with our beautifully themed and emotion-filled baby shower events. Includes games, photography, and gender reveal arrangements.",
+    "cost": "Rs 18,000 onwards",
+    "location": "Lucknow, UP",
+    "duration": "3 hours"
+  },
+  {
+    "id": 6,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP_FbrnEXHkHPPGUjhsmIJg41GFNi4_2NJeLVtwt8Ejr4wsezm6GFWhs5awhvSnaIABtQ&usqp=CAU",
+    "title": "Cultural Fest",
+    "description": "From music and dance to food and crafts, we organize vibrant cultural fests that leave lasting memories. Includes stalls, performances, and art displays.",
+    "cost": "Rs 40,000 onwards",
+    "location": "Chennai, Tamil Nadu",
+    "duration": "Full Day"
+  },
+  {
+    "id": 7,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4R2DlO9W3N2Fd6ejPPk6sNgoeyCt4l8dYyw&s",
+    "title": "College Farewell Party",
+    "description": "Send off your batch with style through a grand and unforgettable farewell event. Includes DJ, games, photo booth, and best-dressed contests.",
+    "cost": "Rs 25,000 onwards",
+    "location": "Hyderabad, Telangana",
+    "duration": "6 hours"
+  },
+  {
+    "id": 8,
+    "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202009/119721612_819078418634880_7161_1200x768.jpeg",
+    "title": "Anniversary Celebration",
+    "description": "Relive your love story and celebrate milestones with intimate and beautifully arranged anniversary parties. Includes romantic décor, candlelight setup, and dinner.",
+    "cost": "Rs 22,000 onwards",
+    "location": "Pune, Maharashtra",
+    "duration": "3-5 hours"
+  },
+  {
+    "id": 9,
+    "image": "https://dittonmanor.com/wp-content/uploads/2024/09/how-to-plan-a-christmas-party.jpg",
+    "title": "Festive Theme Parties",
+    "description": "Celebrate festivals like Diwali, Christmas, or Holi with custom-themed decorations, joyful activities, snacks, and giveaways for guests.",
+    "cost": "Rs 30,000 onwards",
+    "location": "Ahmedabad, Gujarat",
+    "duration": "Evening"
+  }
+]
