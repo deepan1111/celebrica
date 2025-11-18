@@ -142,9 +142,9 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth } from "/Users/Deeban B/OneDrive/Documents/web-projects/OnGoing/event-management-ui-main/event-management-ui-main/src/firebase";  
+import { auth } from "../../firebase";  
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "/Users/Deeban B/OneDrive/Documents/web-projects/OnGoing/event-management-ui-main/event-management-ui-main/src/firebase";
+import { db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
