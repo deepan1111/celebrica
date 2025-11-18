@@ -1,18 +1,35 @@
-// src/Layout.jsx
+// // src/Layout.jsx
+// import { Outlet } from "react-router-dom";
+// import DiscountBanner from "./DiscountBanner";
+// import Footer from "./Footer";
+// import Navbar from "./Navbar";
+
+// export default function Layout({ children}){
+//     return(
+//         <div className="flex flex-col min-h-screen w-full font-poppins">
+//         <Navbar/>
+//         <DiscountBanner/>
+//         <main className="min-h-auto px-4 py-2">{children}</main>
+//           <Outlet />
+
+//         <Footer/>
+//         </div>
+//     );
+// }
+
 import { Outlet } from "react-router-dom";
 import DiscountBanner from "./DiscountBanner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Layout({ children}){
-    return(
+export default function Layout({ children, hideNavbar }) {
+    return (
         <div className="flex flex-col min-h-screen w-full font-poppins">
-        <Navbar/>
-        <DiscountBanner/>
-        <main className="min-h-auto px-4 py-2">{children}</main>
-          <Outlet />
-
-        <Footer/>
+            {!hideNavbar && <Navbar />}
+            {!hideNavbar && <DiscountBanner />}
+            <main className="min-h-auto px-4 py-2">{children}</main>
+            <Outlet />
+            {!hideNavbar && <Footer />}
         </div>
     );
 }

@@ -1,9 +1,9 @@
-
+// // src/pages/SignIn.jsx (UPDATED)
 // import { useState } from "react";
 // import { FcGoogle } from "react-icons/fc";
 // import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-// import { auth } from "../firebase";
-// import { useNavigate, Link } from "react-router-dom";  // ✅ FIXED (Link added)
+// import { auth } from "/Users/Deeban B/OneDrive/Documents/web-projects/OnGoing/event-management-ui-main/event-management-ui-main/src/firebase";  
+// import { useNavigate } from "react-router-dom";
 // import { toast } from "react-hot-toast";
 
 // export default function SignIn() {
@@ -11,13 +11,18 @@
 
 //   const [formData, setFormData] = useState({
 //     email: "",
-//     password: "",
+//     password: ""
 //   });
 
-//   const handleChange = (e) =>
-//     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
 
-//   // Email/Password Sign-In
+//   // Email/Password Sign-in
 //   const handleEmailSignIn = async (e) => {
 //     e.preventDefault();
 //     try {
@@ -30,7 +35,7 @@
 //     }
 //   };
 
-//   // Google Sign-In
+//   // Google Sign-in
 //   const handleGoogleSignIn = async () => {
 //     const provider = new GoogleAuthProvider();
 //     try {
@@ -48,7 +53,7 @@
 //       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
 //         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Sign In</h1>
 
-//         {/* Email/Password Form */}
+//         {/* Email/Password Sign-in Form */}
 //         <form className="space-y-4" onSubmit={handleEmailSignIn}>
 //           <div>
 //             <label className="block text-sm font-medium text-gray-700">Email</label>
@@ -57,9 +62,9 @@
 //               name="email"
 //               value={formData.email}
 //               onChange={handleChange}
-//               required
 //               placeholder="youremail@email.com"
-//               className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+//               required
+//               className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
 //             />
 //           </div>
 
@@ -70,22 +75,21 @@
 //               name="password"
 //               value={formData.password}
 //               onChange={handleChange}
-//               required
 //               placeholder="********"
-//               className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+//               required
+//               className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
 //             />
 //           </div>
 
-//           {/* Remember + Forgot */}
+//           {/* Remember Me + Forgot */}
 //           <div className="flex items-center justify-between text-sm text-gray-500">
 //             <label className="flex items-center">
 //               <input type="checkbox" className="mr-2" />
 //               Remember me
 //             </label>
-//             <Link to="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</Link>
+//             <a href="#" className="text-blue-600 hover:underline">Forgot Password?</a>
 //           </div>
 
-//           {/* Submit Button */}
 //           <button
 //             type="submit"
 //             className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
@@ -94,14 +98,14 @@
 //           </button>
 //         </form>
 
-//         {/* Divider */}
 //         <div className="flex items-center my-4">
 //           <div className="flex-grow border-t border-gray-300"></div>
 //           <span className="mx-4 text-gray-500 font-medium">OR</span>
 //           <div className="flex-grow border-t border-gray-300"></div>
 //         </div>
 
-//         {/* Google OAuth */}
+
+//         {/* OAuth Buttons */}
 //         <div className="flex flex-col gap-4 my-4">
 //           <button
 //             type="button"
@@ -113,34 +117,35 @@
 //           </button>
 //         </div>
 
-//         {/* Signup Link */}
 //         <p className="mt-6 text-center text-sm text-gray-500">
-//           Don’t have an account?{" "}
-//           <Link to="/sign-up" className="text-blue-600 hover:underline">
+//           Don't have an account?{" "}
+//           <a href="/sign-up" className="text-blue-600 hover:underline">
 //             Sign up
-//           </Link>
+//           </a>
 //         </p>
 
-//         {/* Admin Signup */}
-//         <p className="text-sm font-light text-gray-500 text-center p-4">
-//           Are you an Admin?
-//           <Link to="/admin/sign-up">
-//             <span className="font-medium inline text-blue-600 hover:underline ml-1">
-//               Admin Signup
-//             </span>
-//           </Link>
-//         </p>
+//         {/* Admin Link - NEW */}
+//         <div className="mt-4 pt-4 border-t border-gray-200">
+//           <p className="text-center text-sm text-gray-600">
+//             Are you an admin?{" "}
+//             <a href="/admin/sign-in" className="text-blue-600 hover:underline font-medium">
+//               Click here
+//             </a>
+//           </p>
+//         </div>
 //       </div>
 //     </div>
 //   );
 // }
 
+// src/pages/SignIn.jsx (UPDATED - Admin Redirect)
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { auth, db } from "../firebase";
+import { auth } from "/Users/Deeban B/OneDrive/Documents/web-projects/OnGoing/event-management-ui-main/event-management-ui-main/src/firebase";  
 import { doc, getDoc } from "firebase/firestore";
-import { useNavigate, Link } from "react-router-dom";
+import { db } from "/Users/Deeban B/OneDrive/Documents/web-projects/OnGoing/event-management-ui-main/event-management-ui-main/src/firebase";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 export default function SignIn() {
@@ -148,11 +153,16 @@ export default function SignIn() {
 
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
+    password: ""
   });
 
-  const handleChange = (e) =>
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   // Check if user is admin
   const checkUserRole = async (userId) => {
@@ -169,7 +179,7 @@ export default function SignIn() {
     }
   };
 
-  // Email/Password Sign-In
+  // Email/Password Sign-in
   const handleEmailSignIn = async (e) => {
     e.preventDefault();
     try {
@@ -190,7 +200,7 @@ export default function SignIn() {
     }
   };
 
-  // Google Sign-In
+  // Google Sign-in
   const handleGoogleSignIn = async () => {
     const provider = new GoogleAuthProvider();
     try {
@@ -216,7 +226,7 @@ export default function SignIn() {
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Sign In</h1>
 
-        {/* Email/Password Form */}
+        {/* Email/Password Sign-in Form */}
         <form className="space-y-4" onSubmit={handleEmailSignIn}>
           <div>
             <label className="block text-sm font-medium text-gray-700">Email</label>
@@ -225,9 +235,9 @@ export default function SignIn() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
               placeholder="youremail@email.com"
-              className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+              required
+              className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -238,22 +248,21 @@ export default function SignIn() {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              required
               placeholder="********"
-              className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+              required
+              className="mt-1 block w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          {/* Remember + Forgot */}
+          {/* Remember Me + Forgot */}
           <div className="flex items-center justify-between text-sm text-gray-500">
             <label className="flex items-center">
               <input type="checkbox" className="mr-2" />
               Remember me
             </label>
-            <Link to="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</Link>
+            <a href="#" className="text-blue-600 hover:underline">Forgot Password?</a>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
@@ -262,14 +271,13 @@ export default function SignIn() {
           </button>
         </form>
 
-        {/* Divider */}
         <div className="flex items-center my-4">
           <div className="flex-grow border-t border-gray-300"></div>
           <span className="mx-4 text-gray-500 font-medium">OR</span>
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        {/* Google OAuth */}
+        {/* OAuth Buttons */}
         <div className="flex flex-col gap-4 my-4">
           <button
             type="button"
@@ -281,23 +289,22 @@ export default function SignIn() {
           </button>
         </div>
 
-        {/* Signup Link */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Don't have an account?{" "}
-          <Link to="/sign-up" className="text-blue-600 hover:underline">
+          <a href="/sign-up" className="text-blue-600 hover:underline">
             Sign up
-          </Link>
+          </a>
         </p>
 
-        {/* Admin Signup */}
-        <p className="text-sm font-light text-gray-500 text-center p-4">
-          Are you an Admin?
-          <Link to="/admin/sign-up">
-            <span className="font-medium inline text-blue-600 hover:underline ml-1">
-              Admin Signup
-            </span>
-          </Link>
-        </p>
+        {/* Admin Link */}
+        <div className="mt-4 pt-4 border-t border-gray-200">
+          <p className="text-center text-sm text-gray-600">
+            Are You An User User ? {" "}
+            <a href="/sign-in" className="text-blue-600 hover:underline font-medium">
+              Click here
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
