@@ -25,6 +25,7 @@ import ManageUsers from './pages/admin/ManageUsers';
 import AdminRoute from './components/AdminRoute';
 import ManageContacts from './pages/admin/ManageContacts';
 import ManageOrders from './pages/admin/ManageOrders';
+import AdminFeedbacks from './pages/admin/AdminFeedback';
 // Create a wrapper component to use useLocation
 function AppContent() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function AppContent() {
         {/* Admin Routes */}
         <Route path="/admin/sign-in" element={<AdminSignIn/>}/> 
         <Route path="/admin/sign-up" element={<AdminSignUp/>}/>
+        <Route path="/admin/feedbacks" element={<AdminFeedbacks />} />
         <Route 
           path="/admin/dashboard" 
           element={
