@@ -1,90 +1,57 @@
+# 🎉 Celebrica – Event Management Website
 
-# 🎉 Eventique – Event Management Website
+Welcome to **Celebrica**, a modern and elegant event management website built using **React, Vite, Tailwind CSS, and Firebase**.
 
-Welcome to **Eventique**, a stylish and modern event management platform built using React + Vite + Tailwind CSS + Firebase.
-Live Demo: 👉 [https://neweventique.netlify.app](https://neweventique.netlify.app)
+🌐 **Live Demo**: https://celebrica.vercel.app/
 
 ---
 
 ## 🌟 Overview
 
-Eventique is a fast, elegant, and responsive event management frontend built with modern tools.  
-It is perfect for wedding planners, event organizers, and party service providers.
+**Celebrica** is a responsive and visually appealing event management platform designed to showcase and manage events such as weddings, parties, and corporate functions.
+
+The project emphasizes **performance, clean UI design, reusable components, and smooth client-side navigation**, making it suitable for real-world event businesses.
 
 ---
 
 ## 🚀 Features
 
-- ⚡ Blazing fast with **Vite**
-- 🎨 Fully responsive design with **Tailwind CSS**
-- 📷 Beautiful image sliders via **Swiper.js**
-- 🔄 Smooth client-side routing with **React Router DOM**
-- 📦 Organized folder structure and reusable components
-- 🎯 Icons using **React Icons**
-- 🧹 Linting with ESLint and optimized build setup
+- ⚡ High-performance frontend powered by **Vite**
+- 🎨 Fully responsive UI using **Tailwind CSS**
+- 📷 Interactive image sliders using **Swiper.js**
+- 🔄 Seamless navigation with **React Router DOM**
+- 🔐 Secure user authentication with **Firebase Authentication**
+- ☁️ Cloud-based data storage using **Firestore**
+- 🧩 Modular and reusable React components
+- 🎯 Modern icons via **React Icons**
+- 🧹 Code quality maintained using **ESLint**
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 19
-- **Build Tool**: Vite 7
-- **Styling**: Tailwind CSS 3
-- **Routing**: React Router DOM 7
-- **UI Enhancements**: Swiper, React Icons
-- **Linting**: ESLint + React Refresh plugin
-- **Authentication**: Firebase Auth
-- **Database** : Firestore
+### Frontend
+- **React 19**
+- **Vite 7**
+- **Tailwind CSS 3**
+- **React Router DOM 7**
+- **Swiper.js**
+- **React Icons**
+
+### Backend / Services
+- **Firebase Authentication**
+- **Firebase Firestore**
+
+### Tools
+- **ESLint**
+- **Git & GitHub**
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Setup
 
-1. Clone the repository:
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/newdevatgit/event-management-ui.git
-cd event-management-ui
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the local development server:
-```bash
-npm run dev
-```
-
----
-
-## 📸 Screenshots
-
-### 🔹 Home page
-![Home page](src/assets/Home_page_before_login.png)
-
-### 🔹 Home page Logged In
-![Home page](src/assets/Home_page_after_login.png)
-
-### 🔹 Services
-![services](src/assets/services_page.png)
-
---
-
-## 🌐 Live Demo
-
-👉 [https://neweventique.netlify.app](https://neweventique.netlify.app)
-
----
-
-## 🙌 Acknowledgements
-
-Built with ❤️ using React, Vite, and Tailwind CSS as part of a personal web development project.
-
----
-
-## ⭐ Show Your Support
-
-If you like this project, give it a ⭐ on GitHub or share it!
-
----
+git clone https://github.com/deepan1111/celebrica.git
+cd celebrica
